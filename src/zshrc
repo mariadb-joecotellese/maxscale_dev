@@ -1,0 +1,38 @@
+# Set up the prompt
+PROMPT='%n@%m:%~%# '
+
+# Enable command auto-completion
+autoload -Uz compinit
+compinit
+
+# Set Zsh options
+setopt EXTENDED_GLOB     # Extended pattern matching
+setopt AUTO_CD           # Change directory just by typing the directory name
+setopt CORRECT           # Auto-correct errors in commands
+setopt HIST_IGNORE_DUPS  # Do not record duplicate entries in history
+
+# Command history setup
+HISTFILE=~/.zsh_history  # Where to store history
+HISTSIZE=1000            # Number of entries to store in memory
+SAVEHIST=1000            # Number of entries to store in the history file
+
+# Aliases - You can add your own aliases here
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Customize the ls command color
+export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;33:sg=46;30:tw=42;34:ow=43;34"
+
+# Set default editor (you can change it to your preferred one, like nano, vim, etc.)
+export EDITOR='vim'
+
+# Environment variables
+# Set or export your custom environment variables here
+# Example:
+# export PATH="/usr/local/bin:$PATH"
+
+# Source other configuration files (if any)
+# source /path/to/other/config/file
+
+# End of .zshrc
