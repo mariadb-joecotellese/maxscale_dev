@@ -1,10 +1,11 @@
-FROM alpine:latest
+FROM ubuntu:jammy
 
 ENV HOME /root
 
-RUN apk update && \
-    apk add --no-cache \
-    bison \
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get update && \
+    apt-get install -y \
+    build-essential \ 
     cmake \
     curl \
     git \
@@ -12,20 +13,26 @@ RUN apk update && \
     g++ \
     gcc \
     gnutls-dev \
-    libcurl \
-    libuuid \
-    sqlite \
     libgcrypt-dev \
+    lua5.3 \
+    liblua5.3-0 \
+    liblua5.3-dev \
     libtool \
+    libcurl4-gnutls-dev \
+    libpam0g-dev \
+    libkrb5-dev \
+    libsqlite3-dev \
     make \
+    npm \ 
     ncurses-dev \
-    openssl \
-    openssl-dev \
+    # openssl \
+    # openssl-dev \
     perl \
+    sqlite3 \
     unixodbc-dev \
-    ossp-uuid-dev \
+    uuid-dev \
     vim \
-    zlib-dev \
+    # zlib-dev \
     zsh \
 # Setup local directory
 && mkdir -p /root/src
