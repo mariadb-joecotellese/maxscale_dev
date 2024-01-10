@@ -14,7 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     gcc \
     gnutls-dev \
     libgcrypt-dev \
-    lua5.3 \
+    libicu-dev \
     liblua5.3-0 \
     liblua5.3-dev \
     libtool \
@@ -22,6 +22,10 @@ RUN DEBIAN_FRONTEND=noninteractive \
     libpam0g-dev \
     libkrb5-dev \
     libsqlite3-dev \
+    libsasl2-dev \
+    libz-dev \
+    liblzma-dev \
+    lua5.3 \
     make \
     npm \ 
     ncurses-dev \
